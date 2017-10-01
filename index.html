@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<canvas id="canv" height="550" width="900"></canvas>
+
+<controller class="container">
+    <div class="group btn-group-lg upload">
+        <input type="button" id="resetBtn" class="btn btn-default" value="RESET"/>
+    </div>
+
+    <div class="divider"></div>
+    <div class="btn-group viewstyle">
+        <h4>View Style:</h4>
+        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+            <button type="button" id="Perspective" class="btn btn-default">Perspective</button>
+            <button type="button" id="Orthographic" class="btn btn-default">Parallel</button>
+            <button type="button" id="Oblique" class="btn btn-default">Oblique</button>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="group scale">
+        <h4>Scale:</h4>
+
+        <input placeholder="0" type="number" class="form-control bfh-number" data-wrap="true" id="scaleRange" value="0.1" step="any" max="10" min="0.1"  ><br>
+
+        <button onclick="scale()" type="button" class="btn btn-default" aria-label="..." >Go
+            <span class="glyphicon glyphicon glyphicon-zoom-in
+" aria-hidden="true"></span>
+        </button>
+
+    </div>
+
+    <div class="divider"></div>
+    <div class="btn-group rotate">
+        <h4>Rotate on</h4>
+        <div class="input-group">
+                  <span class="input-group-btn btn-group-lg">
+                    <button onclick="rotate(1)" type="button" class="btn btn-default">X axis</button>
+                    <button onclick="rotate(2)" type="button" class="btn btn-default">Y axis</button>
+                    <button onclick="rotate(3)" type="button" class="btn btn-default">Z axis</button>
+                  </span>
+            <input id="rotateDegree" value="1" step="any" max="360" min="-360" type="number" class="form-control" placeholder="0">
+        </div>
+        <div class="clear"></div>
+    </div>
+
+<!--
+    <div class="group btn-group-lg">
+        <input type="button" id="resetBtn" class="btn btn-default" value="RESET"/>
+    </div>
+-->
+
+    <div class="clear"></div>
+</controller>
+<div class="clear"></div>
+<script src="script.js"></script>
+</body>
+</html>
